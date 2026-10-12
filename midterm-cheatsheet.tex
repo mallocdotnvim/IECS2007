@@ -1,0 +1,50 @@
+\documentclass[6pt, landscape, a4paper]{article}
+
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{titling}
+\usepackage[margin=0.3in, landscape]{geometry}
+\titleformat{\subsection}
+  {\small\bfseries}
+  {\thesubsection}{0.3em}{}
+
+\titleformat{\subsubsection}
+  {\footnotesize\bfseries}
+  {\thesubsubsection}{0.3em}{}
+
+\titlespacing*{\subsection}{0pt}{3pt}{1pt}
+\titlespacing*{\subsubsection}{0pt}{2pt}{1pt}
+
+\pretitle{\begin{center}\large\bfseries}
+\posttitle{\end{center}\vspace{-2.5ex}}
+\predate{} \postdate{}
+\preauthor{} \postauthor{}
+\setlength{\columnsep}{8pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\abovedisplayskip}{2pt}
+\setlength{\belowdisplayskip}{2pt}
+\setlength{\abovedisplayshortskip}{1pt}
+\setlength{\belowdisplayshortskip}{1pt}
+\setlength{\droptitle}{-2cm}
+
+\usepackage{amsmath}   
+\usepackage{amssymb}  
+\usepackage{mathtools} 
+\usepackage{bm}       
+
+\title{Discrete Mathematics Cheatsheet}
+\date{}
+\author{malloc.nvim}
+\begin{document}
+\maketitle{}
+
+\small
+\begin{multicols*}{6}
+\input{propositional_logic}
+\end{multicols*}
+
+\end{document}

@@ -1,0 +1,449 @@
+\section{\normalsize Propositional Logic}
+\vspace{-0.5em}
+\subsection{Propositions}
+A proposition is a declarative statement that has exactly one truth value: either True ($T$) or False ($F$).
+\subsection{Logical Connectives}
+\subsubsection{Logical Operators}
+$$
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\noindent\resizebox{\linewidth}{!}{$
+\begin{array}{|c|c|c|}
+\hline
+\textbf{Symbol} & \textbf{Name} & \textbf{Meaning}\\
+\hline
+\neg p & \text{Negation} & \text{NOT }p\\
+\hline
+p\land q & \text{Conjunction} & p\text{ AND }q\\
+\hline
+p\lor q & \text{Disjunction} & p\text{ OR }q\\
+\hline
+p\to q & \text{Implication} & \text{IF }p\text{ THEN }q\\
+\hline
+p\leftrightarrow q & \text{Biconditional} & \text{IFF}\\
+\hline
+p\oplus q & \text{XOR} & \text{Exactly one}\\
+\hline
+\end{array}
+$}
+\endgroup
+$$
+\subsubsection{Truth Table}
+$$
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\noindent\resizebox{\linewidth}{!}{$
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+p&q&\neg p&p\land q&p\lor q&p\to q&p\leftrightarrow q&p\oplus q\\
+\hline
+T&T&F&T&T&T&T&F\\
+\hline
+T&F&F&F&T&F&F&T\\
+\hline
+F&T&T&F&T&T&F&T\\
+\hline
+F&F&T&F&F&T&T&F\\
+\hline
+\end{array}
+$}
+\endgroup
+$$
+\subsection{Propositional Equivalences}
+\subsubsection{Logical Equivalences}
+$$
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\noindent\resizebox{\linewidth}{!}{$
+\begin{array}{|l|l|}
+\hline
+\text{Law} & \text{Equivalence}\\
+\hline
+\text{Identity} &
+p\land T\equiv p,\quad p\lor F\equiv p\\
+\hline
+\text{Domination} &
+p\lor T\equiv T,\quad p\land F\equiv F\\
+\hline
+\text{Idempotent} &
+p\land p\equiv p,\quad p\lor p\equiv p\\
+\hline
+\text{Double Negation} &
+\neg\neg p\equiv p\\
+\hline
+\text{Commutative} &
+p\land q\equiv q\land p\\
+& p\lor q\equiv q\lor p\\
+\hline
+\text{Associative} &
+(p\land q)\land r\equiv p\land(q\land r)\\
+& (p\lor q)\lor r\equiv p\lor(q\lor r)\\
+\hline
+\text{Distributive} &
+p\land(q\lor r)\equiv(p\land q)\lor(p\land r)\\
+& p\lor(q\land r)\equiv(p\lor q)\land(p\lor r)\\
+\hline
+\text{De Morgan} &
+\neg(p\land q)\equiv\neg p\lor\neg q\\
+& \neg(p\lor q)\equiv\neg p\land\neg q\\
+\hline
+\text{Negation} &
+p\lor\neg p\equiv T,\quad p\land\neg p\equiv F\\
+\hline
+\text{Absorption} &
+p\lor(p\land q)\equiv p\\
+& p\land(p\lor q)\equiv p\\
+\hline
+\end{array}
+$}
+\endgroup
+$$
+$$
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\noindent\resizebox{\linewidth}{!}{$
+\begin{array}{|l|l|}
+\hline
+\text{Law} & \text{Equivalence}\\
+\hline
+\text{Conditional} & p\to q\equiv\neg p\lor q\\
+\hline
+\text{Converse} & q\to p\\
+\hline
+\text{Inverse} & \neg p\to\neg q\\
+\hline
+\text{Contrapositive} & \neg q\to\neg p\\
+\hline
+\text{Negation of Conditional} &
+\neg(p\to q)\equiv p\land\neg q\\
+\hline
+\end{array}
+$}
+\endgroup
+$$
+\subsubsection{Logical Equivalences \\ Involving Conditional and \\ Biconditional Statements}
+$$
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\noindent\resizebox{\linewidth}{!}{$
+\begin{array}{|l|l|}
+\hline
+\text{Law} & \text{Equivalence}\\
+\hline
+\text{Conditional Identity} &
+p\to q\equiv\neg p\lor q\\
+\hline
+\text{Contrapositive} &
+p\to q\equiv\neg q\to\neg p\\
+\hline
+\text{Negation of Conditional} &
+\neg(p\to q)\equiv p\land\neg q\\
+\hline
+\text{Biconditional Identity} &
+p\leftrightarrow q\equiv(p\to q)\land(q\to p)\\
+\hline
+\text{Biconditional (Expanded)} &
+p\leftrightarrow q\equiv
+(p\land q)\lor(\neg p\land\neg q)\\
+\hline
+\text{Negation of Biconditional} &
+\neg(p\leftrightarrow q)\equiv
+(p\land\neg q)\lor(\neg p\land q)\\
+\hline
+\end{array}
+$}
+\endgroup
+$$
+\subsubsection{Translation of Logical \\ Equivalences}
+$$
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\noindent\resizebox{\linewidth}{!}{$
+\begin{array}{|l|l|}
+\hline
+\text{English Phrase} & \text{Logical Form}\\
+\hline
+\text{not }p & \neg p\\
+\hline
+p\text{ and }q & p\land q\\
+\hline
+p\text{ or }q & p\lor q\\
+\hline
+\text{Either }p\text{ or }q\text{, but not both} & p\oplus q\\
+\hline
+\text{If }p\text{, then }q & p\to q\\
+\hline
+p\text{ only if }q & p\to q\\
+\hline
+p\text{ if }q & q\to p\\
+\hline
+p\text{ if and only if }q & p\leftrightarrow q\\
+\hline
+p\text{ is sufficient for }q & p\to q\\
+\hline
+p\text{ is necessary for }q & q\to p\\
+\hline
+\text{Neither }p\text{ nor }q & \neg p\land\neg q\\
+\hline
+\text{Not both }p\text{ and }q & \neg(p\land q)\\
+\hline
+\text{At least one of }p,q & p\lor q\\
+\hline
+\text{Both }p\text{ and }q\text{ are false} & \neg p\land\neg q\\
+\hline
+\end{array}
+$}
+\endgroup
+$$
+\subsection{Predicates and Quantifiers}
+A predicate $P(x)$ is a statement involving a variable
+that becomes a proposition when a value is assigned to the variable.
+
+The domain of discourse is the set of values a variable
+is allowed to take.
+$$
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\noindent\resizebox{\columnwidth}{!}{$
+\begin{array}{|c|l|l|}
+\hline
+\text{Symbol} & \text{Name} & \text{Meaning}\\
+\hline
+\forall x\,P(x) & \text{Universal} &
+P(x)\text{ holds for every }x\\
+\hline
+\exists x\,P(x) & \text{Existential} &
+P(x)\text{ holds for at least one }x\\
+\hline
+\exists!x\,P(x) & \text{Unique existence} &
+P(x)\text{ holds for exactly one }x\\
+\hline
+\end{array}
+$}
+\endgroup
+$$
+Example: Let $P(x)$ mean "$x>0$" over $\mathbb{Z}$.
+Then $\forall x\,P(x)$ is false, while $\exists x\,P(x)$ is true.
+\subsubsection{De Morgan's Laws for \\ Quantifiers}
+$$
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\noindent\resizebox{\columnwidth}{!}{$
+\begin{array}{|l|l|}
+\hline
+\text{Law} & \text{Equivalence}\\
+\hline
+\text{Universal Negation} &
+\neg\forall x\,P(x)\equiv\exists x\,\neg P(x)\\
+\hline
+\text{Existential Negation} &
+\neg\exists x\,P(x)\equiv\forall x\,\neg P(x)\\
+\hline
+\text{Negated Universal} &
+\neg(\forall x\,P(x))\equiv\exists x\,\neg P(x)\\
+\hline
+\text{Negated Existential} &
+\neg(\exists x\,P(x))\equiv\forall x\,\neg P(x)\\
+\hline
+\end{array}
+$}
+\endgroup
+$$
+\subsubsection{Multiple Quantifiers}
+$$
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\noindent\resizebox{\columnwidth}{!}{$
+\begin{array}{|l|l|}
+\hline
+\text{Statement} & \text{Meaning}\\
+\hline
+\forall x\forall y\,P(x,y) &
+P\text{ holds for every pair }(x,y)\\
+\hline
+\exists x\exists y\,P(x,y) &
+P\text{ holds for at least one pair}\\
+\hline
+\forall x\exists y\,P(x,y) &
+\text{For every }x,\text{ some }y\text{ works}\\
+\hline
+\exists y\forall x\,P(x,y) &
+\text{One }y\text{ works for every }x\\
+\hline
+\end{array}
+$}
+\endgroup
+$$
+$$
+\neg\forall x\exists y\,P(x,y)
+\equiv
+\exists x\forall y\,\neg P(x,y)
+$$
+$$
+\neg\exists x\forall y\,P(x,y)
+\equiv
+\forall x\exists y\,\neg P(x,y)
+$$
+\subsubsection{Translation into Predicate \\ Logic}
+$$
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\noindent\resizebox{\columnwidth}{!}{$
+\begin{array}{|l|l|}
+\hline
+\text{English} & \text{Logical Form}\\
+\hline
+\text{Every }x\text{ has property }P &
+\forall x\,P(x)\\
+\hline
+\text{Some }x\text{ has property }P &
+\exists x\,P(x)\\
+\hline
+\text{No }x\text{ has property }P &
+\forall x\,\neg P(x)\\
+\hline
+\text{Not every }x\text{ has property }P &
+\exists x\,\neg P(x)\\
+\hline
+\text{Everyone is }P\text{ and }Q &
+\forall x\,(P(x)\land Q(x))\\
+\hline
+\text{Everyone is }P\text{ or }Q &
+\forall x\,(P(x)\lor Q(x))\\
+\hline
+\text{Someone is }P\text{ and }Q &
+\exists x\,(P(x)\land Q(x))\\
+\hline
+\text{Someone is }P\text{ or }Q &
+\exists x\,(P(x)\lor Q(x))\\
+\hline
+\text{Every }P\text{ is }Q &
+\forall x\,(P(x)\to Q(x))\\
+\hline
+\text{Some }P\text{ is }Q &
+\exists x\,(P(x)\land Q(x))\\
+\hline
+\text{No }P\text{ is }Q &
+\forall x\,(P(x)\to\neg Q(x))\\
+\hline
+\text{Some }P\text{ is not }Q &
+\exists x\,(P(x)\land\neg Q(x))\\
+\hline
+\end{array}
+$}
+\endgroup
+$$
+\subsection{Rules of Inference}
+$$
+\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.15}
+\noindent\resizebox{\columnwidth}{!}{$
+\begin{array}{|l|c|}
+\hline
+\text{Rule} & \text{Form}\\
+\hline
+\text{Modus Ponens (MP)} &
+\begin{array}{l}
+p\\
+p\to q\\
+\hline
+\therefore q
+\end{array}\\
+\hline
+\text{Modus Tollens (MT)} &
+\begin{array}{l}
+p\to q\\
+\neg q\\
+\hline
+\therefore\neg p
+\end{array}\\
+\hline
+\text{Hypothetical Syllogism (HS)} &
+\begin{array}{l}
+p\to q\\
+q\to r\\
+\hline
+\therefore p\to r
+\end{array}\\
+\hline
+\text{Disjunctive Syllogism (DS)} &
+\begin{array}{l}
+p\lor q\\
+\neg p\\
+\hline
+\therefore q
+\end{array}\\
+\hline
+\text{Addition} &
+\begin{array}{l}
+p\\
+\hline
+\therefore p\lor q
+\end{array}\\
+\hline
+\text{Simplification} &
+\begin{array}{l}
+p\land q\\
+\hline
+\therefore p
+\end{array}\\
+\hline
+\text{Conjunction} &
+\begin{array}{l}
+p\\
+q\\
+\hline
+\therefore p\land q
+\end{array}\\
+\hline
+\text{Resolution} &
+\begin{array}{l}
+p\lor q\\
+\neg p\lor r\\
+\hline
+\therefore q\lor r
+\end{array}\\
+\hline
+\text{Universal Instantiation (UI)} &
+\begin{array}{l}
+\forall x\,P(x)\\
+\hline
+\therefore P(c)
+\end{array}\\
+\hline
+\text{Existential Instantiation (EI)} &
+\begin{array}{l}
+\exists x\,P(x)\\
+\hline
+\therefore P(c)
+\end{array}\\
+\hline
+\text{Universal Generalization (UG)} &
+\begin{array}{l}
+P(c),\ c\text{ arbitrary}\\
+\hline
+\therefore\forall x\,P(x)
+\end{array}\\
+\hline
+\text{Existential Generalization (EG)} &
+\begin{array}{l}
+P(c)\\
+\hline
+\therefore\exists x\,P(x)
+\end{array}\\
+\hline
+\end{array}
+$}
+\endgroup
+$$
