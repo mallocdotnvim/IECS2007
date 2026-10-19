@@ -1,8 +1,8 @@
 \section{\normalsize Propositional Logic}
 \vspace{-0.5em}
-\subsection{Propositions}
+{\color{blue}\subsection{Propositions}}
 A proposition is a declarative statement that has exactly one truth value: either True ($T$) or False ($F$).
-\subsection{Logical Connectives}
+{\color{blue}\subsection{Logical Connectives}}
 \subsubsection{Logical Operators}
 $$
 \begingroup
@@ -51,7 +51,7 @@ F&F&T&F&F&T&T&F\\
 $}
 \endgroup
 $$
-\subsection{Propositional Equivalences}
+{\color{blue}\subsection{Propositional \\ Equivalences}}
 \subsubsection{Logical Equivalences}
 $$
 \begingroup
@@ -125,7 +125,7 @@ $$
 $}
 \endgroup
 $$
-\subsubsection{Logical Equivalences \\ Involving Conditional and \\ Biconditional Statements}
+\subsubsection{Logical Equivalences \\ Involving Conditional and Biconditional \\ Statements}
 $$
 \begingroup
 \scriptsize
@@ -201,7 +201,7 @@ p\text{ is necessary for }q & q\to p\\
 $}
 \endgroup
 $$
-\subsection{Predicates and Quantifiers}
+{\color{blue}\subsection{Predicates and \\ Quantifiers}}
 A predicate $P(x)$ is a statement involving a variable
 that becomes a proposition when a value is assigned to the variable.
 
@@ -283,17 +283,7 @@ P\text{ holds for at least one pair}\\
 $}
 \endgroup
 $$
-$$
-\neg\forall x\exists y\,P(x,y)
-\equiv
-\exists x\forall y\,\neg P(x,y)
-$$
-$$
-\neg\exists x\forall y\,P(x,y)
-\equiv
-\forall x\exists y\,\neg P(x,y)
-$$
-\subsubsection{Translation into Predicate \\ Logic}
+\subsubsection{Translation into \\ Predicate Logic}
 $$
 \begingroup
 \scriptsize
@@ -343,7 +333,7 @@ $$
 $}
 \endgroup
 $$
-\subsection{Rules of Inference}
+{\color{blue}\subsection{Rules of Inference}}
 $$
 \begingroup
 \scriptsize
@@ -442,6 +432,42 @@ P(c)\\
 \hline
 \therefore\exists x\,P(x)
 \end{array}\\
+\hline
+\end{array}
+$}
+\endgroup
+$$
+{\color{blue}\subsection{Introduction to Proofs}}
+\subsubsection{Choosing \\ a Proof Method}
+$$
+\begingroup
+\renewcommand{\arraystretch}{1.2}
+\resizebox{\columnwidth}{!}{$
+\begin{array}{|l|}
+\hline
+\text{Can }p\text{ directly imply }q\text{?}\\
+\text{Direct Proof}\\
+\hline
+\text{Is }\neg q\to\neg p\text{ easier to prove?}\\
+\text{Contraposition}\\
+\hline
+\text{Is the hypothesis always false?}\\
+\text{Vacuous Proof}\\
+\hline
+\text{Is the conclusion always true?}\\
+\text{Trivial Proof}\\
+\hline
+\text{Does assuming the opposite lead to a contradiction?}\\
+\text{Proof by Contradiction}\\
+\hline
+\text{Can the statement be divided into exhaustive cases?}\\
+\text{Proof by Cases}\\
+\hline
+\text{Is the statement about all integers }n\geq n_0\text{?}\\
+\text{Mathematical Induction}\\
+\hline
+\text{Can one example disprove the claim?}\\
+\text{Counterexample}\\
 \hline
 \end{array}
 $}
