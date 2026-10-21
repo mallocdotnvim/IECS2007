@@ -1,7 +1,5 @@
 \section{\normalsize Propositional Logic}
 \vspace{-0.5em}
-{\color{blue}\subsection{Propositions}}
-A proposition is a declarative statement that has exactly one truth value: either True ($T$) or False ($F$).
 {\color{blue}\subsection{Logical Connectives}}
 \subsubsection{Logical Operators}
 $$
@@ -202,11 +200,6 @@ $}
 \endgroup
 $$
 {\color{blue}\subsection{Predicates and \\ Quantifiers}}
-A predicate $P(x)$ is a statement involving a variable
-that becomes a proposition when a value is assigned to the variable.
-
-The domain of discourse is the set of values a variable
-is allowed to take.
 $$
 \begingroup
 \scriptsize
@@ -229,8 +222,6 @@ P(x)\text{ holds for exactly one }x\\
 $}
 \endgroup
 $$
-Example: Let $P(x)$ mean "$x>0$" over $\mathbb{Z}$.
-Then $\forall x\,P(x)$ is false, while $\exists x\,P(x)$ is true.
 \subsubsection{De Morgan's Laws for \\ Quantifiers}
 $$
 \begingroup
@@ -439,35 +430,35 @@ $}
 $$
 {\color{blue}\subsection{Introduction to Proofs}}
 \subsubsection{Choosing \\ a Proof Method}
+
 $$
 \begingroup
-\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1.4}
 \resizebox{\columnwidth}{!}{$
 \begin{array}{|l|}
 \hline
-\text{Can }p\text{ directly imply }q\text{?}\\
-\text{Direct Proof}\\
+\multicolumn{1}{|c|}{\textbf{Methods of Proving}}\\
 \hline
-\text{Is }\neg q\to\neg p\text{ easier to prove?}\\
-\text{Contraposition}\\
+\text{Can we derive }q\text{ directly from }p\text{?}\\
+\textbf{Direct Proof}\\
 \hline
-\text{Is the hypothesis always false?}\\
-\text{Vacuous Proof}\\
+\text{Is }\neg q\to\neg p\text{ easier to establish?}\\
+\textbf{Proof by Contrapositive}\\
 \hline
-\text{Is the conclusion always true?}\\
-\text{Trivial Proof}\\
+\text{Does assuming the statement is false lead to a contradiction?}\\
+\textbf{Proof by Contradiction}\\
 \hline
-\text{Does assuming the opposite lead to a contradiction?}\\
-\text{Proof by Contradiction}\\
+\text{Can we divide the problem into exhaustive cases?}\\
+\textbf{Proof by Cases}\\
 \hline
-\text{Can the statement be divided into exhaustive cases?}\\
-\text{Proof by Cases}\\
+\text{Can we prove both }p\to q\text{ and }q\to p\text{?}\\
+\textbf{Proof of Equivalence}\\
 \hline
-\text{Is the statement about all integers }n\geq n_0\text{?}\\
-\text{Mathematical Induction}\\
+\text{Can we find an object satisfying the required property?}\\
+\textbf{Existence Proof}\\
 \hline
-\text{Can one example disprove the claim?}\\
-\text{Counterexample}\\
+\text{Can we start from the conclusion and work backward?}\\
+\textbf{Backward Reasoning}\\
 \hline
 \end{array}
 $}
