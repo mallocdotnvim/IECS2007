@@ -1,0 +1,135 @@
+\section{Proof}
+\begingroup
+\footnotesize
+\subsection{Direct Proof}
+
+\textbf{1. If $n$ is odd, $n^2$ is odd.} \\
+Assume that $n$ is odd. \\
+Let $n=2k+1$, $k\in\mathbb Z$.
+\[
+n^2=(2k+1)^2=2(2k^2+2k)+1.
+\]
+Hence $n^2$ is odd. $\square$
+
+\textbf{2. If $m,n$ are squares, $mn$ is a square.} \\
+Assume that $m$ and $n$ are both squares. \\
+Let $m=a^2,n=b^2$, $a,b\in\mathbb Z$.
+\[
+mn=a^2b^2=(ab)^2.
+\]
+Hence $mn$ is a perfect square. $\square$
+
+\subsection{Proof by Contraposition}
+
+\textbf{If $3n+2$ is odd, $n$ is odd.}
+
+Contrapositive: \\ 
+Assume that $n$ is even, $3n+2$ is even. \\
+Let $n=2k$:
+\[
+3n+2=6k+2=2(3k+1).
+\]
+Since the negation of conclusion implies the negation of hypothesis, the original conditional statement is true. $\square$
+
+\textbf{2. If $n=ab$, then $a\leq\sqrt n$
+or $b\leq\sqrt n$.}
+
+Contrapositive: \\ 
+Assume that $a>\sqrt n$ and
+$b>\sqrt n$, then $ab\neq n$.
+
+Since $a,b>0$,
+\[
+ab>\sqrt n\cdot\sqrt n=n.
+\]
+Thus $ab\neq n$. \\
+Since the negation of conclusion implies the negation of hypothesis, the original conditional statement is true. $\square$
+\subsection{Proof by Contradiction}
+
+\textbf{1. $\sqrt{2}$ is irrational.}
+
+Assume that $\sqrt{2}$ is rational. \\
+$\sqrt2=a/b$, 
+$a,b\in\mathbb{Z},\quad b\neq 0,\quad a, b \text{ coprime }$
+\[
+a^2=2b^2\Rightarrow a=2k
+\]
+\[
+4k^2=2b^2\Rightarrow b^2=2k^2.
+\]
+Both $a,b$ are even, they share a common factor of $2$. \\
+It contradicts the initial assumption that $a, b$ \\ coprime, so the original statement is true.
+$\square$
+
+\textbf{2. If $3n+2$ is odd, $n$ is odd.}
+
+Assume that the statement is false.
+Then we have $3n+2$ is odd and $n$ is even.
+Let $n=2k$:
+\[
+3n+2=2(3k+1),
+\]
+Hence $3n + 2$ is even. \\
+It contradicts the initial assumption that $3n + 2$ is odd, so the original statement is true.
+$\square$
+
+\subsection{Proof of Equivalence}
+
+\textbf{Prove:}
+$P_1$: $n$ even;
+$P_2$: $n-1$ odd;
+$P_3$: $n^2$ even.
+
+Show $P_1\Rightarrow P_2\Rightarrow P_3
+\Rightarrow P_1$.
+
+\textbf{$P_1\Rightarrow P_2$:}
+$n=2k\Rightarrow n-1=2(k-1)+1$ (odd).
+
+\textbf{$P_2\Rightarrow P_3$:}
+$n-1=2k+1\Rightarrow n=2(k+1)$.
+\[
+n^2=2[2(k+1)^2]\quad\text{(even)}.
+\]
+
+\textbf{$P_3\Rightarrow P_1$:}
+Contrapositive: $n=2k+1$ gives
+\[
+n^2=2(2k^2+2k)+1\quad\text{(odd)}.
+\]
+Hence all three are equivalent. $\square$
+
+\subsection{Non-Constructive Proof}
+
+\textbf{Exist irrational $x,y$ with rational $x^y$.}
+
+Let $a=(\sqrt2)^{\sqrt2}$.
+
+\textbf{Case 1:} If $a\in\mathbb Q$, choose
+$x=y=\sqrt2$. Then $x^y=a\in\mathbb Q$.
+
+\textbf{Case 2:} If $a\notin\mathbb Q$, choose
+$x=a$, $y=\sqrt2$:
+\[
+x^y=((\sqrt2)^{\sqrt2})^{\sqrt2}=2.
+\]
+Both cases establish existence. $\square$
+
+\subsection{Backward Reasoning}
+
+\textbf{AM--GM:} For $a,b>0$, prove
+$\frac{a+b}{2}\geq\sqrt{ab}$.
+
+Work backward:
+\[
+\begin{aligned}
+\frac{a+b}{2}\geq\sqrt{ab}
+&\iff a+b\geq2\sqrt{ab}\\
+&\iff a+b-2\sqrt{ab}\geq0\\
+&\iff(\sqrt a-\sqrt b)^2\geq0.
+\end{aligned}
+\]
+Last statement is always true.
+Equality iff $a=b$. $\square$
+
+\endgroup

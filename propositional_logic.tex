@@ -1,12 +1,11 @@
-\section{\normalsize Propositional Logic}
+\section{Propositional Logic}
 \vspace{-0.5em}
-{\color{blue}\subsection{Logical Connectives}}
+\subsection{\textcolor{blue}{Logical Connectives}}
 \subsubsection{Logical Operators}
-$$
-\begingroup
+\par\begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.2}
-\noindent\resizebox{\linewidth}{!}{$
+\noindent\resizebox{\columnwidth}{!}{$
 \begin{array}{|c|c|c|}
 \hline
 \textbf{Symbol} & \textbf{Name} & \textbf{Meaning}\\
@@ -25,14 +24,12 @@ p\oplus q & \text{XOR} & \text{Exactly one}\\
 \hline
 \end{array}
 $}
-\endgroup
-$$
+\endgroup\par
 \subsubsection{Truth Table}
-$$
-\begingroup
+\par\begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.2}
-\noindent\resizebox{\linewidth}{!}{$
+\noindent\resizebox{\columnwidth}{!}{$
 \begin{array}{|c|c|c|c|c|c|c|c|}
 \hline
 p&q&\neg p&p\land q&p\lor q&p\to q&p\leftrightarrow q&p\oplus q\\
@@ -47,15 +44,13 @@ F&F&T&F&F&T&T&F\\
 \hline
 \end{array}
 $}
-\endgroup
-$$
-{\color{blue}\subsection{Propositional \\ Equivalences}}
+\endgroup\par
+\subsection{\textcolor{blue}{Propositional Equivalences}}
 \subsubsection{Logical Equivalences}
-$$
-\begingroup
+\par\begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.2}
-\noindent\resizebox{\linewidth}{!}{$
+\noindent\resizebox{\columnwidth}{!}{$
 \begin{array}{|l|l|}
 \hline
 \text{Law} & \text{Equivalence}\\
@@ -97,50 +92,37 @@ p\lor(p\land q)\equiv p\\
 \hline
 \end{array}
 $}
-\endgroup
-$$
-$$
-\begingroup
+\endgroup\par
+\par\begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.2}
-\noindent\resizebox{\linewidth}{!}{$
+\noindent\resizebox{\columnwidth}{!}{$
 \begin{array}{|l|l|}
 \hline
 \text{Law} & \text{Equivalence}\\
 \hline
 \text{Conditional} & p\to q\equiv\neg p\lor q\\
 \hline
-\text{Converse} & q\to p\\
+\text{Converse (of }p\to q\text{)} & q\to p\\
 \hline
-\text{Inverse} & \neg p\to\neg q\\
+\text{Inverse (of }p\to q\text{)} & \neg p\to\neg q\\
 \hline
-\text{Contrapositive} & \neg q\to\neg p\\
+\text{Contrapositive (equivalent)} & \neg q\to\neg p\\
 \hline
 \text{Negation of Conditional} &
 \neg(p\to q)\equiv p\land\neg q\\
 \hline
 \end{array}
 $}
-\endgroup
-$$
+\endgroup\par
 \subsubsection{Logical Equivalences \\ Involving Conditional and Biconditional \\ Statements}
-$$
-\begingroup
+\par\begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.2}
-\noindent\resizebox{\linewidth}{!}{$
+\noindent\resizebox{\columnwidth}{!}{$
 \begin{array}{|l|l|}
 \hline
 \text{Law} & \text{Equivalence}\\
-\hline
-\text{Conditional Identity} &
-p\to q\equiv\neg p\lor q\\
-\hline
-\text{Contrapositive} &
-p\to q\equiv\neg q\to\neg p\\
-\hline
-\text{Negation of Conditional} &
-\neg(p\to q)\equiv p\land\neg q\\
 \hline
 \text{Biconditional Identity} &
 p\leftrightarrow q\equiv(p\to q)\land(q\to p)\\
@@ -155,14 +137,12 @@ p\leftrightarrow q\equiv
 \hline
 \end{array}
 $}
-\endgroup
-$$
-\subsubsection{Translation of Logical \\ Equivalences}
-$$
-\begingroup
+\endgroup\par
+\subsubsection{Translation of Logical Equivalences}
+\par\begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.2}
-\noindent\resizebox{\linewidth}{!}{$
+\noindent\resizebox{\columnwidth}{!}{$
 \begin{array}{|l|l|}
 \hline
 \text{English Phrase} & \text{Logical Form}\\
@@ -197,11 +177,9 @@ p\text{ is necessary for }q & q\to p\\
 \hline
 \end{array}
 $}
-\endgroup
-$$
-{\color{blue}\subsection{Predicates and \\ Quantifiers}}
-$$
-\begingroup
+\endgroup\par
+\subsection{\textcolor{blue}{Predicates and Quantifiers}}
+\par\begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.2}
 \noindent\resizebox{\columnwidth}{!}{$
@@ -220,11 +198,9 @@ P(x)\text{ holds for exactly one }x\\
 \hline
 \end{array}
 $}
-\endgroup
-$$
-\subsubsection{De Morgan's Laws for \\ Quantifiers}
-$$
-\begingroup
+\endgroup\par
+\subsubsection{De Morgan's Laws for Quantifiers}
+\par\begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.2}
 \noindent\resizebox{\columnwidth}{!}{$
@@ -246,11 +222,9 @@ $$
 \hline
 \end{array}
 $}
-\endgroup
-$$
+\endgroup\par
 \subsubsection{Multiple Quantifiers}
-$$
-\begingroup
+\par\begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.2}
 \noindent\resizebox{\columnwidth}{!}{$
@@ -272,11 +246,71 @@ P\text{ holds for at least one pair}\\
 \hline
 \end{array}
 $}
-\endgroup
-$$
+\endgroup\par
+\subsubsection{Properties of Quantifiers}
+\par\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\noindent\resizebox{\columnwidth}{!}{$
+\begin{array}{|l|l|}
+\hline
+\text{Property} & \text{Equivalence}\\
+\hline
+\shortstack[l]{Universal \\ Distribution} &
+\forall x(P(x)\land Q(x))
+\equiv \forall xP(x)\land\forall xQ(x)\\
+\hline
+\shortstack[l]{Existential \\ Distribution} &
+\exists x(P(x)\lor Q(x))
+\equiv \exists xP(x)\lor\exists xQ(x)\\
+\hline
+\shortstack[l]{Universal \\ Commutativity} &
+\forall x\forall yP(x,y)
+\equiv\forall y\forall xP(x,y)\\
+\hline
+\shortstack[l]{Existential \\ Commutativity} &
+\exists x\exists yP(x,y)
+\equiv\exists y\exists xP(x,y)\\
+\hline
+\shortstack[l]{Universal \\ Implication} &
+\forall x(P(x)\to Q(x))
+\equiv\neg\exists x(P(x)\land\neg Q(x))\\
+\hline
+\shortstack[l]{Existential \\ Implication} &
+\exists x(P(x)\to Q(x))
+\equiv\neg\forall xP(x)\lor\exists xQ(x)\\
+\hline
+\end{array}
+$}
+\endgroup\par
+
+\subsubsection{Quantifier Order}
+\par\begingroup
+\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\noindent\resizebox{\columnwidth}{!}{$
+\begin{array}{|l|l|}
+\hline
+\text{Property} & \text{Relationship}\\
+\hline
+\text{Same Quantifiers} &
+\forall x\forall yP\equiv\forall y\forall xP\\
+&
+\exists x\exists yP\equiv\exists y\exists xP\\
+\hline
+\text{Mixed Quantifiers} &
+\exists y\forall xP(x,y)
+\to\forall x\exists yP(x,y)\\
+\hline
+\text{Not Equivalent} &
+\forall x\exists yP(x,y)
+\not\equiv\exists y\forall xP(x,y)\\
+\hline
+\end{array}
+$}
+\endgroup\par
 \subsubsection{Translation into \\ Predicate Logic}
-$$
-\begingroup
+\par\begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.2}
 \noindent\resizebox{\columnwidth}{!}{$
@@ -322,11 +356,9 @@ $$
 \hline
 \end{array}
 $}
-\endgroup
-$$
-{\color{blue}\subsection{Rules of Inference}}
-$$
-\begingroup
+\endgroup\par
+\subsection{\textcolor{blue}{Rules of Inference}}
+\par\begingroup
 \scriptsize
 \renewcommand{\arraystretch}{1.15}
 \noindent\resizebox{\columnwidth}{!}{$
@@ -403,11 +435,11 @@ p\lor q\\
 \therefore P(c)
 \end{array}\\
 \hline
-\text{Existential Instantiation (EI)} &
+\text{Existential Instantiation (EI; fresh }c\text{)} &
 \begin{array}{l}
 \exists x\,P(x)\\
 \hline
-\therefore P(c)
+\therefore P(c),\ c\text{ fresh}
 \end{array}\\
 \hline
 \text{Universal Generalization (UG)} &
@@ -426,13 +458,10 @@ P(c)\\
 \hline
 \end{array}
 $}
-\endgroup
-$$
-{\color{blue}\subsection{Introduction to Proofs}}
+\endgroup\par
+\subsection{\textcolor{blue}{Introduction to Proofs}}
 \subsubsection{Choosing \\ a Proof Method}
-
-$$
-\begingroup
+\par\begingroup
 \renewcommand{\arraystretch}{1.4}
 \resizebox{\columnwidth}{!}{$
 \begin{array}{|l|}
@@ -462,5 +491,16 @@ $$
 \hline
 \end{array}
 $}
-\endgroup
-$$
+\subsubsection{Mathematical Induction}
+To prove $P(n)$ for all $n\geq n_0$:
+\begin{enumerate}
+  \item \textbf{Base Case:} Verify $P(n_0)$.
+  \item \textbf{Inductive Hypothesis:} \\
+  Assume $P(k)$ is true for arbitrary $k\geq n_0$.
+  \item \textbf{Inductive Step:} \\
+  Use $P(k)$ to prove $P(k+1)$.
+  \item \textbf{Conclusion:} \\
+  By induction, $P(n)$ holds for all $n\geq n_0$.
+\end{enumerate}
+\endgroup\par
+

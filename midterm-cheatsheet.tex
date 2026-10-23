@@ -1,4 +1,4 @@
-\documentclass[6pt, landscape, a4paper]{article}
+\documentclass[6pt, landscape, a4paper]{extarticle}
 
 \usepackage{titlesec}
 \usepackage{graphicx}
@@ -7,17 +7,19 @@
 \usepackage{multicol}
 \usepackage{titling}
 \usepackage[margin=0.3in, landscape]{geometry}
-\titleformat{\subsection}
-  {\small\bfseries}
-  {\thesubsection}{0.3em}{}
 
 \titleformat{\subsubsection}
   {\footnotesize\bfseries}
   {\thesubsubsection}{0.3em}{}
 
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{blue}}
+  {\thesubsection}{1em}{}
+
+
 \titlespacing*{\section}{0pt}{1pt}{1pt}
 \titlespacing*{\subsection}{0pt}{3pt}{1pt}
-\titlespacing*{\subsubsection}{0pt}{2pt}{1pt}
+\titlespacing*{\subsubsection}{0pt}{1ex}{0.2ex}
 
 \pretitle{\begin{center}\large\bfseries}
 \posttitle{\end{center}\vspace{-2.5ex}}
@@ -42,10 +44,16 @@
 \author{malloc.nvim}
 \begin{document}
 \maketitle{}
-
+\raggedbottom
 \normalsize
 \begin{multicols*}{4}
 \input{propositional_logic}
 \end{multicols*}
+
+\newpage
+\begin{multicols*}{4}
+\input{example}
+\end{multicols*}
+
 
 \end{document}
