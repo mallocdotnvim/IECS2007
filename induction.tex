@@ -1,0 +1,160 @@
+\section{Mathematical Induction}
+\vspace{-0.5em}
+
+\subsection{Sum of Odd Integers}
+\textbf{Prove:}
+$1+3+\cdots+(2n-1)=n^2$, $n\geq1$.
+
+\textbf{Base step:} $n=1$: $1=1^2$.
+
+\textbf{Induction Hypothesis:} \\ 
+Assume that the statement holds for \\ $n=k, k \in \mathbb{Z}^{+}$. \\
+$1+3+\cdots+(2k-1)=k^2$.
+
+\textbf{Inductive step:}
+\[
+\begin{aligned}
+1+3+\cdots+(2k+1)
+&=k^2+(2k+1)\\
+&=(k+1)^2.
+\end{aligned}
+\]
+so that $P(k+1)$ is true if $P(k)$ is true. \\
+Thus, the statement holds for all $n \in \mathbb{Z}^{+}$. $\square$
+
+\subsection{Inequality: $n<2^n$}
+\textbf{Prove:} $n<2^n$, $n\geq1$.
+
+\textbf{Base step:} $n=1$: $1<2$. \\
+Thus the statement holds for $n=1$
+
+\textbf{Inductive Hypothesis:} \\ 
+Assume that the statement holds for \\ 
+$n=k, k \in \mathbb{Z}^{+}, k\geq1$ \\
+$k<2^k$.
+
+\textbf{Inductive step:} Since $k\geq1$,
+\[
+k+1\leq2k<2\cdot2^k=2^{k+1}.
+\]
+so that $P(k+1)$ is true if $P(k)$ is true. \\
+Thus, $n<2^{n}$ is true for all $n\in\mathbb{Z}^{+}$. $\square$
+
+\subsection{Divisibility by 3}
+\textbf{Prove:} $3\mid(n^3-n)$, $n\geq1$.
+
+\textbf{Base step:} $n=1$: $1^3-1=0$.
+
+\textbf{Inductive Hypothesis:} \\ 
+Assume that the statement holds for \\
+$n = k,k\in\mathbb{Z}^{+}$
+$3\mid(k^3-k)$.
+
+\textbf{Inductive step:}
+\[
+\begin{aligned}
+(k+1)^3-(k+1)
+&=k^3+3k^2+2k\\
+&=(k^3-k)+3k(k+1).
+\end{aligned}
+\]
+By the inductive step, we conclude that
+both terms are divisible by 3.
+Thus, $3\mid(n^3-n)$ for all $n\in\mathbb{Z}^{+}$.
+$\square$
+
+\subsection{Sum of Squares}
+\textbf{Prove:}
+\[
+\sum_{i=1}^{n}i^2
+=\frac{n(n+1)(2n+1)}{6}.
+\]
+
+\textbf{Base step:} $n=1$:
+$1=\frac{1(2)(3)}{6}$.\\
+Thus the statement holds for $n=1$.\\
+\textbf{Inductive Hypothesis:} \\ 
+Assume the statements holds for \\ $n=k,k\in\mathbb{Z}^{+}$.
+\[
+\sum_{i=1}^{k}i^2
+=\frac{k(k+1)(2k+1)}{6}.
+\]
+
+\textbf{Inductive step:}
+\[
+\begin{aligned}
+\sum_{i=1}^{k+1}i^2
+&=\frac{k(k+1)(2k+1)}{6}+(k+1)^2\\
+&=\frac{(k+1)[k(2k+1)+6(k+1)]}{6}\\
+&=\frac{(k+1)(2k^2+7k+6)}{6}\\
+&=\frac{(k+1)(k+2)(2k+3)}{6}.
+\end{aligned}
+\]
+This is the formula for $n=k+1$.\\
+By mathematical induction, the formula is true for all $n\in\mathbb{Z}^{+}$. $\square$
+
+\subsection{Factorial Inequality}
+\textbf{Prove:} $2^n<n!$, $n\geq4$.
+
+\textbf{Base step:} $n=4$: $16<24$.\\
+Thus the statement holds for $n=4$
+\textbf{Inductive Hypothesis:} 
+Assume the statement holds for $n=k,k\in\mathbb{Z}^{+},k\geq4$. \\
+$2^k<k!$
+
+\textbf{Inductive step:} Since $k+1>2$,
+\[
+2^{k+1}=2\cdot2^k
+<2k!<(k+1)k!=(k+1)!.
+\]
+Thus, $P(k+1)$ is true if $P(k)$ is true, $2^n < n!$ for all $n\in\mathbb{Z}^{+}$ where $n\geq4$. $\square$
+
+\subsection{Geometric Sum}
+\textbf{Prove:}
+\[
+1+2+2^2+\cdots+2^n=2^{n+1}-1,
+\quad n\geq0.
+\]
+
+\textbf{Base step:} $n=0$: $1=2^1-1$.
+Thus, the statement holds for $n=0$ \\
+\textbf{Inductive Hypothesis:} \\
+Assume that the statement holds for \\ $n=k,k\in\mathbb{Z}_{\geq0}$ \\
+$\sum_{i=0}^{k}2^i=2^{k+1}-1$.
+
+\textbf{Inductive Step:}
+\[
+\begin{aligned}
+\sum_{i=0}^{k+1}2^i
+&=(2^{k+1}-1)+2^{k+1}\\
+&=2\cdot2^{k+1}-1\\
+&=2^{k+2}-1.
+\end{aligned}
+\]
+By mathematical induction, $P(n)$ is true for all $n\geq0$. $\square$
+
+\subsection{Divisibility by 57}
+\textbf{Prove:}
+$57\mid(7^{n+2}+8^{2n+1})$, $n\geq0$.
+
+\textbf{Base step:} $n=0$:
+\[
+7^2+8^1=49+8=57.
+\]
+
+\textbf{Inductive Hypothesis:} \\
+Assume the statement holds for \\ $n=k,k\in\mathbb{Z},k\geq0$ \\
+$57\mid(7^{k+2}+8^{2k+1})$.
+
+\textbf{Inductive step:}
+\[
+\begin{aligned}
+&7^{k+3}+8^{2k+3}\\
+&=7\cdot7^{k+2}+64\cdot8^{2k+1}\\
+&=7(7^{k+2}+8^{2k+1})
+  +57\cdot8^{2k+1}.
+\end{aligned}
+\]
+By the inductive step, we conclude that first term is divisible by $57$,
+and the second term is also divisible by $57$.
+Thus, $7^{k+2}+8^{2k+1}$ is divisible by $57$ for all $n\in\mathbb{Z}$ where $n\geq0$

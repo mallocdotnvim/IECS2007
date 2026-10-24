@@ -2,7 +2,7 @@
 
 \usepackage{titlesec}
 \usepackage{graphicx}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{multicol}
 \usepackage{titling}
@@ -11,11 +11,6 @@
 \titleformat{\subsubsection}
   {\footnotesize\bfseries}
   {\thesubsubsection}{0.3em}{}
-
-\titleformat{\subsection}
-  {\normalsize\bfseries\color{blue}}
-  {\thesubsection}{1em}{}
-
 
 \titlespacing*{\section}{0pt}{1pt}{1pt}
 \titlespacing*{\subsection}{0pt}{3pt}{1pt}
@@ -47,12 +42,25 @@
 \raggedbottom
 \normalsize
 \begin{multicols*}{4}
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{blue}}
+  {\thesubsection}{1em}{}
 \input{propositional_logic}
 \end{multicols*}
 
 \newpage
 \begin{multicols*}{4}
-\input{example}
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{orange}}
+  {\thesubsection}{1em}{}
+\footnotesize
+\input{proof}
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{red}}
+  {\thesubsection}{1em}{}
+\footnotesize
+\input{induction}
+
 \end{multicols*}
 
 
